@@ -20,7 +20,9 @@ jobs:
           ls -al
       - name: Read File
         #Lee
-        run: cat hola.txt
+        run: |
+          cat hola.txt
+          ls -al
 
   dos:
     runs-on: ubuntu-latest
@@ -30,3 +32,8 @@ jobs:
         uses: actions/checkout@v4.2.1
       - name: Directorio
         run: ls -al
+
+      - name: Instalar
+        run: |
+          cd .github/workflows
+          ls -al 
